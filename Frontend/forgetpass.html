@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forget Password</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .forget-container {
+      background: white;
+      border-radius: 24px;
+      padding: 2.7rem 2.5rem 2.2rem 2.5rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      width: 370px;
+      max-width: 93vw;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin-top: 0;
+      margin-bottom: 1.6rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    label {
+      font-size: 1.13rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.4rem;
+      margin-top: 1.1rem;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 9px;
+      border: 1.2px solid #ccc;
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+      box-sizing: border-box;
+      transition: border-color 0.18s;
+      background: #fafafa;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #a104fa;
+      box-shadow: 0 0 6px #a104fa26;
+      background: #fff;
+    }
+    button {
+      margin-top: 1.0rem;
+      padding: 0.95rem;
+      font-size: 1.17rem;
+      font-weight: 600;
+      background-color: #5e3ad4;
+      color: white;
+      border: none;
+      border-radius: 13px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color:#7d5fff;
+    }
+    .login-row {
+      margin-top: 1.7rem;
+      text-align: center;
+      font-size: 1.07rem;
+    }
+    .login-row a {
+      color:#7d5fff;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 4px;
+    }
+    .login-row a:hover {
+      text-decoration: underline;
+    }
+    @media(max-width: 600px) {
+      .forget-container { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="forget-container">
+    <h1>Forget Password</h1>
+    <form action="#" method="POST">
+      <label for="email">Enter your registered email</label>
+      <input type="email" id="email" name="email" placeholder="Email address" required />
+      <button type="submit">Send Reset Link</button>
+    </form>
+    <div class="login-row">
+      Back to 
+      <a href="index.html" target="_blank">Login</a>
+    </div>
+  </div>
+</body>
+</html>

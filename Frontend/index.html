@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .main-container {
+      display: flex;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      width: 900px;
+      max-width: 98vw;
+    }
+    .left-image {
+      flex: 1.2 1 350px;
+      min-width: 350px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .left-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .right-panel {
+      flex: 1 1 350px;
+      min-width: 350px;
+      background: #fff;
+      border-radius: 0 24px 24px 0;
+      padding: 3rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-box {
+      width: 100%;
+      max-width: 440px;
+      margin: auto;
+      text-align: center;
+    }
+    .form-box h1 {
+      font-size: 2.3rem;
+      font-weight: bold;
+      margin-bottom: 1.4rem;
+      margin-top: 0;
+      text-align: center;
+    }
+    label {
+      font-size: 1.15rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.4rem;
+      margin-top: 1.05rem;
+      text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+      width: 85%;
+      margin: 0 auto 1.2rem auto;
+      padding: 0.68rem 0.95rem;
+      display: block;
+      border-radius: 9px;
+      border: 1.2px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.18s;
+      background: #fafafa;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+      outline: none;
+      border-color: #a104fa;
+      box-shadow: 0 0 6px #a104fa26;
+      background: #fff;
+    }
+    button {
+      margin-top: 1.0rem;
+      margin-bottom: 1.1rem;
+      padding: 1.0rem 0.3rem;
+      font-size: 1.19rem;
+      font-weight: 600;
+      background-color: #a104fa;
+      color: white;
+      border: none;
+      border-radius: 13px;
+      cursor: pointer;
+      width: 85%;
+      transition: background 0.2s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button:hover {
+      background-color: #7d05c0;
+    }
+    .forgot-password {
+      text-align: right;
+      font-size: 1rem;
+      margin-right: 7.5%;
+      margin-bottom: 1.7rem;
+    }
+    .forgot-password a {
+      color: #a104fa;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+    .register-row {
+      margin-top: 1.0rem;
+      font-size: 1.10rem;
+      text-align: center;
+    }
+    .register-row span {
+      color: #000;
+      font-weight: 400;
+    }
+    .register-row a {
+      color: #a104fa;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 7px;
+    }
+    .register-row a:hover {
+      text-decoration: underline;
+    }
+    @media(max-width: 900px) {
+      .main-container { flex-direction: column; width: 98vw; min-width:0; border-radius:24px;}
+      .left-image, .right-panel { min-width: 100%; }
+      .right-panel { padding: 2rem 1.5rem; }
+      .form-box {max-width: 100%;}
+      input[type="text"], input[type="password"], button { width: 98%; }
+      .forgot-password { margin-right: 2%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-image">
+      <img src="C:\Users\prasa\Downloads\PM-Internship-Scheme-2024.webp" alt="Background Image" />
+    </div>
+    <div class="right-panel">
+      <div class="form-box">
+        <h1>Login</h1>
+        <form action="#" method="POST">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" name="username" placeholder="Enter username or email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+          <button type="submit">Login</button>
+
+          <div class="forgot-password">
+            <a href="forgetpass.html">Forgot Password?</a>
+          </div>
+        </form>
+        <div class="register-row">
+          <span>if you don't have account?</span>
+          <a href="reg.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

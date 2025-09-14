@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .registration-container {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+      width: 420px;
+      max-width: 90vw;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      margin-top: 1.2rem;
+      font-size: 1.1rem;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 7px;
+      border: 1.2px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+      outline: none;
+      border-color: #7d5fff;
+      box-shadow: 0 0 7px #7d5fff44;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.85rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background-color: #7d5fff;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #5e3ad4;
+    }
+    .login-link {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .login-link a {
+      color: #7d5fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 500px) {
+      .registration-container {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Register</h2>
+    <form action="#" method="POST">
+      <label for="regUsername">Username</label>
+      <input type="text" id="regUsername" name="regUsername" placeholder="Choose a username" required />
+
+      <label for="regEmail">Email</label>
+      <input type="email" id="regEmail" name="regEmail" placeholder="Enter your email" required />
+
+      <label for="regPassword">Password</label>
+      <input type="password" id="regPassword" name="regPassword" placeholder="Create a password" required />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="login-link">
+    Already have an account?<a href="index.html" target="_blank">Login here</a>
+    </div>
+  </div>
+</body>
+</html>
