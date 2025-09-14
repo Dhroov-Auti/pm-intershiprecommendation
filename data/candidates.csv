@@ -1,0 +1,11 @@
+candidate_id,name,age,education_level,location,preferred_locations,skills,interests,language,experience_months,preferred_sector,preferred_duration,min_stipend
+C001,Rahul Kumar,21,12th Pass,Bihar,"Bihar,Delhi,Kolkata","basic computer,communication,typing","social work,education","Hindi,English",0,"Social Work,Education",4,3000
+C002,Priya Sharma,23,Bachelor's Degree,Delhi,"Delhi,Bangalore,Mumbai","java,python,programming","software development,technology","English,Hindi",6,"Software Development,Data Science",6,12000
+C003,Amit Singh,19,10th Pass,Rajasthan,"Rajasthan,Jaipur","farming knowledge,local language","agriculture,rural development","Hindi,Rajasthani",0,"Agriculture,Social Work",6,3500
+C004,Sneha Patel,22,Diploma,Gujarat,"Ahmedabad,Mumbai,Pune","design software,creativity","design,marketing","Gujarati,Hindi,English",3,"Design,Marketing",4,7000
+C005,Ravi Verma,20,12th Pass,Uttar Pradesh,"Delhi,Noida,Gurgaon","basic computer,ms office","data entry,administration","Hindi,English",0,"Administration,Customer Service",3,5000
+C006,Anjali Devi,24,Bachelor's Degree,Karnataka,"Bangalore,Hyderabad","python,data analysis,statistics","data science,research","English,Kannada",12,"Data Science,Software Development",6,15000
+C007,Suresh Yadav,18,10th Pass,Jharkhand,"Jharkhand,Bihar","communication,teaching","education,social work","Hindi,Local",0,"Education,Social Work",5,4000
+C008,Pooja Mishra,21,12th Pass,Odisha,"Odisha,Kolkata","basic medical knowledge,empathy","healthcare,social service","Odia,Hindi",0,"Healthcare,Social Work",4,5000
+C009,Karan Mehta,22,Bachelor's Degree,Maharashtra,"Mumbai,Pune,Bangalore","html,css,javascript","web development,software","English,Hindi,Marathi",3,"Software Development,Design",6,10000
+C010,Nisha Kumari,20,12th Pass,Punjab,"Punjab,Delhi","communication,basic computer","customer service,marketing","Punjabi,Hindi,English",0,"Customer Service,Marketing",3,6000

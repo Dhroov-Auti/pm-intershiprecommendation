@@ -1,0 +1,21 @@
+id,title,company,location,sector,skills_required,education_level,duration_months,stipend,description,remote_available,language,difficulty_level
+INT001,Digital Marketing Intern,TechStart Solutions,Delhi,Marketing,"social media,content writing,basic computer",12th Pass,3,5000,Learn digital marketing basics,True,"Hindi,English",Beginner
+INT002,Java Developer Intern,CodeCraft Technologies,Bangalore,Software Development,"java,programming,problem solving",Bachelor's Degree,6,15000,Work on Java applications,True,English,Intermediate
+INT003,Rural Development Coordinator,Gram Vikas Foundation,Bihar,Social Work,"communication,basic computer,local language",10th Pass,4,4000,Support rural development projects,False,"Hindi,Local",Beginner
+INT004,Data Entry Operator,InfoTech Services,Mumbai,Administration,"typing,ms office,basic computer",12th Pass,3,6000,Handle data entry tasks,True,"Hindi,English,Marathi",Beginner
+INT005,Python Developer Intern,AI Innovations,Hyderabad,Software Development,"python,programming,problem solving,data analysis",Bachelor's Degree,6,18000,Work on Python and ML projects,True,English,Intermediate
+INT006,Teaching Assistant,Rural Education Trust,Jharkhand,Education,"teaching,communication,basic computer",12th Pass,5,5500,Assist in teaching rural students,False,"Hindi,Local",Beginner
+INT007,Graphic Design Intern,Creative Studios,Pune,Design,"design software,creativity,basic computer",Diploma,4,8000,Create visual content,True,"English,Hindi",Intermediate
+INT008,Agriculture Field Assistant,KrishiTech,Punjab,Agriculture,"farming knowledge,communication,local language",10th Pass,6,7000,Support modern farming techniques,False,"Punjabi,Hindi",Beginner
+INT009,Customer Support Executive,ServiceFirst BPO,Noida,Customer Service,"communication,basic computer,typing",12th Pass,3,8000,Handle customer queries,True,"Hindi,English",Beginner
+INT010,Healthcare Assistant,Community Health Center,Odisha,Healthcare,"basic medical knowledge,communication,empathy",12th Pass,4,6500,Assist in healthcare delivery,False,"Odia,Hindi",Beginner
+INT011,Content Writer Intern,Digital Media House,Chennai,Content Creation,"writing,research,basic computer,english",Bachelor's Degree,4,7000,Create engaging content for various platforms,True,"English,Tamil",Beginner
+INT012,Mobile App Testing Intern,AppTest Solutions,Gurgaon,Quality Assurance,"testing,attention to detail,basic computer",12th Pass,3,6500,Test mobile applications for bugs,True,"Hindi,English",Beginner
+INT013,Community Outreach Worker,NGO Foundation,Rajasthan,Social Work,"communication,local language,empathy",10th Pass,5,4500,Connect with rural communities,False,"Hindi,Rajasthani",Beginner
+INT014,E-commerce Assistant,Online Bazaar,Kolkata,E-commerce,"basic computer,product listing,communication",12th Pass,4,7500,Manage online product listings,True,"Bengali,Hindi,English",Beginner
+INT015,Junior Web Developer,WebTech Solutions,Kochi,Software Development,"html,css,javascript,basic programming",Diploma,6,12000,Build and maintain websites,True,"English,Malayalam",Intermediate
+INT016,Finance Data Entry,Accounts Pro,Ahmedabad,Finance,"excel,data entry,basic accounting",12th Pass,3,6000,Maintain financial records,True,"Gujarati,Hindi,English",Beginner
+INT017,Social Media Manager,StartUp Hub,Jaipur,Marketing,"social media,content creation,analytics",Bachelor's Degree,4,9000,Manage social media presence,True,"Hindi,English",Intermediate
+INT018,Field Survey Assistant,Market Research Co,Assam,Research,"data collection,communication,local language",10th Pass,3,5000,Conduct field surveys,False,"Assamese,Hindi",Beginner
+INT019,Python Data Analyst Intern,DataTech,Pune,Data Science,"python,data analysis,excel,statistics",Bachelor's Degree,6,16000,Analyze data and create reports,True,English,Intermediate
+INT020,Handicraft Production Assistant,Artisan Collective,Uttar Pradesh,Manufacturing,"craftsmanship,creativity,attention to detail",8th Pass,4,4000,Assist in traditional handicraft production,False,"Hindi,Local",Beginner
