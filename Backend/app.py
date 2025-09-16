@@ -27,7 +27,7 @@ candidates_db = {}
 recommendations_cache = {}
 
 @app.route('/')
-def web_home():
+def home():
     """API welcome message"""
     return jsonify({
         'message': 'PM Internship Recommendation API',
@@ -89,7 +89,7 @@ def register_candidate():
             'error': str(e)
         }), 400
 
-@app.route('/api/recommendations/<candidate_id>', methods=['GET'])
+@app.route('/api/recommendations/<candidate_id>', methods=['GET',"POST","OPTIONS"])
 def get_recommendations(candidate_id):
     """Get personalized recommendations for a candidate"""
     try:
@@ -101,7 +101,7 @@ def get_recommendations(candidate_id):
             }), 404
         
         # Get number of recommendations requested
-        top_n = request.args.get('top_n', 5, type=int)
+        top_n = request.args.get('top_n', 10, type=int)
         
         # Generate fresh recommendations
         candidate_profile = candidates_db[candidate_id]
@@ -329,7 +329,7 @@ def quick_match():
         }
         
         # Get recommendations
-        recommendations = recommender.recommend_internships(temp_profile, top_n=3)
+        recommendations = recommender.recommend_internships(temp_profile, top_n=5)
         
         # Format for response
         formatted_recommendations = []
@@ -386,15 +386,75 @@ def get_learning_resources(missing_skills):
             suggestions.extend(resources[skill.lower()])
     
     return suggestions[:5]  # Return top 5 suggestions
+def recommend_internships_with_helpers(recommender, candidate_profile, top_n=5):
+    """
+    Generate top N internship recommendations with match level and learning resource suggestions.
+    
+    Args:
+        recommender: InternshipRecommender instance
+        candidate_profile: dict of candidate data
+        top_n: int, number of top recommendations
+        
+    Returns:
+        List of recommendation dicts, each containing internship info,
+        match level, why recommended, and learning resources.
+    """
 
-@app.route("/api")
-def index():
-    return {"endpoints": {"predict": "/predict", "health": "/health"}}
+    def get_match_level(score):
+        if score >= 80:
+            return 'Excellent Match'
+        elif score >= 60:
+            return 'Good Match'
+        elif score >= 40:
+            return 'Fair Match'
+        else:
+            return 'Consider Other Options'
+
+    def get_learning_resources(missing_skills):
+        resources = {
+            'java': ['Java basics on YouTube', 'Free Java course on Coursera'],
+            'python': ['Python for beginners - YouTube', 'Python.org tutorials'],
+            'programming': ['Introduction to Programming - Khan Academy', 'Code.org'],
+            'data analysis': ['Excel basics', 'Google Data Analytics Certificate'],
+            'social media': ['Facebook Blueprint', 'Google Digital Garage'],
+            'content writing': ['Content writing basics - YouTube', 'Grammarly blog'],
+            'basic computer': ['Computer basics - YouTube', 'Digital literacy courses'],
+            'communication': ['Communication skills - YouTube', 'Public speaking tips'],
+            'ms office': ['Microsoft Office tutorials', 'Excel basics on YouTube']
+        }
+        suggestions = []
+        for skill in missing_skills:
+            if skill.lower() in resources:
+                suggestions.extend(resources[skill.lower()])
+        return suggestions[:5]
+
+    # Get the raw recommendations
+    recommendations = recommender.recommend_internships(candidate_profile, top_n=top_n)
+    
+    enriched_recommendations = []
+    for rec in recommendations:
+        match_level = get_match_level(rec['match_score'])
+        learning_resources = get_learning_resources(rec['skill_gap']['missing_skills'])
+        
+        enriched_recommendations.append({
+            'internship_id': rec['internship_id'],
+            'title': rec['title'],
+            'company': rec['company'],
+            'location': rec['location'],
+            'sector': rec['sector'],
+            'stipend': rec['stipend'],
+            'duration_months': rec['duration_months'],
+            'remote_available': rec['remote_available'],
+            'difficulty_level': rec['difficulty_level'],
+            'match_score': rec['match_score'],
+            'match_level': match_level,
+            'why_recommended': rec['why_recommended'],
+            'skill_gap': rec['skill_gap'],
+            'learning_resources': learning_resources
+        })
+    
+    return enriched_recommendations
 
 
-if __name__ == "__main__":
-    app.run(
-        host="0.0.0.0",   # allows access from other devices
-        port=5000,        # you can change if needed
-        debug=True        # optional, auto-reloads on changes
-    )
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
