@@ -1,187 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f2f2f2;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-    .main-container {
-      display: flex;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
-      width: 900px;
-      max-width: 98vw;
-    }
-    .left-image {
-      flex: 1.2 1 350px;
-      min-width: 350px;
-      background: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .left-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .right-panel {
-      flex: 1 1 350px;
-      min-width: 350px;
-      background: #fff;
-      border-radius: 0 24px 24px 0;
-      padding: 3rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .form-box {
-      width: 100%;
-      max-width: 440px;
-      margin: auto;
-      text-align: center;
-    }
-    .form-box h1 {
-      font-size: 2.3rem;
-      font-weight: bold;
-      margin-bottom: 1.4rem;
-      margin-top: 0;
-      text-align: center;
-    }
-    label {
-      font-size: 1.15rem;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 0.4rem;
-      margin-top: 1.05rem;
-      text-align: center;
-    }
-    input[type="text"], input[type="password"] {
-      width: 85%;
-      margin: 0 auto 1.2rem auto;
-      padding: 0.68rem 0.95rem;
-      display: block;
-      border-radius: 9px;
-      border: 1.2px solid #ccc;
-      font-size: 1rem;
-      box-sizing: border-box;
-      transition: border-color 0.18s;
-      background: #fafafa;
-    }
-    input[type="text"]:focus, input[type="password"]:focus {
-      outline: none;
-      border-color: #a104fa;
-      box-shadow: 0 0 6px #a104fa26;
-      background: #fff;
-    }
-    button {
-      margin-top: 1.0rem;
-      margin-bottom: 1.1rem;
-      padding: 1.0rem 0.3rem;
-      font-size: 1.19rem;
-      font-weight: 600;
-      background-color: #a104fa;
-      color: white;
-      border: none;
-      border-radius: 13px;
-      cursor: pointer;
-      width: 85%;
-      transition: background 0.2s;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    button:hover {
-      background-color: #7d05c0;
-    }
-    .forgot-password {
-      text-align: right;
-      font-size: 1rem;
-      margin-right: 7.5%;
-      margin-bottom: 1.7rem;
-    }
-    .forgot-password a {
-      color: #a104fa;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .forgot-password a:hover {
-      text-decoration: underline;
-    }
-    .register-row {
-      margin-top: 1.0rem;
-      font-size: 1.10rem;
-      text-align: center;
-    }
-    .register-row span {
-      color: #000;
-      font-weight: 400;
-    }
-    .register-row a {
-      color: #a104fa;
-      font-weight: bold;
-      text-decoration: none;
-      margin-left: 7px;
-    }
-    .register-row a:hover {
-      text-decoration: underline;
-    }
-    @media(max-width: 900px) {
-      .main-container { flex-direction: column; width: 98vw; min-width:0; border-radius:24px;}
-      .left-image, .right-panel { min-width: 100%; }
-      .right-panel { padding: 2rem 1.5rem; }
-      .form-box {max-width: 100%;}
-      input[type="text"], input[type="password"], button { width: 98%; }
-      .forgot-password { margin-right: 2%; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Internship Matcher - Find Your Perfect Internship</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="main-container">
-    <div class="left-image">
-      <img src="C:\Users\prasa\Downloads\PM-Internship-Scheme-2024.webp" alt="Background Image" />
-    </div>
-    <div class="right-panel">
-      <div class="form-box">
-        <h1>Login</h1>
-        <form action="#" method="POST">
-          <label for="username">Username or Email</label>
-          <input type="text" id="username" name="username" placeholder="Enter username or email" required />
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>PM Internship Matcher</h1>
+            </div>
+            <p class="tagline">अपनी स्किल्स के अनुसार इंटर्नशिप खोजें | Find internships matching your skills</p>
+        </header>
 
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter password" required />
-         <button>Login</button>
-          <div class="forgot-password">
-            <a href="forgetpass.html">Forgot Password?</a>
-          </div>
-        </form>
-        <div class="register-row">
-          <span>if you don't have account?</span>
-          <a href="reg.html">Register</a>
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="hi">हिंदी</button>
         </div>
-      </div>
-    </div>
-  </div>
-  <script>
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();  // Prevent default form submit
 
-    // Redirect to details page in same tab
-    window.location.href = 'details.html';
-  });
-</script>
+        <!-- Quick Match Section -->
+        <section class="quick-match-section">
+            <h2 id="quickMatchTitle" data-en="Quick Match - Get 5 Recommendations" data-hi="क्विक मैच - 5 सिफारिशें प्राप्त करें" class="section-title lang-btn active">
+    Quick Match - Get 5 Recommendations
+</h2>
+
+            
+            <form id="quickMatchForm" class="match-form">
+                <!-- Education Level -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-book"></i>
+                        <span data-en="Education Level" data-hi="शिक्षा स्तर">Education Level</span>
+                    </label>
+                    <div class="visual-select">
+                        <button type="button" class="visual-option" data-value="10th Pass">
+                            <i class="fas fa-school"></i>
+                            <span>10th Pass</span>
+                        </button>
+                        <button type="button" class="visual-option active" data-value="12th Pass">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>12th Pass</span>
+                        </button>
+                        <button type="button" class="visual-option" data-value="Diploma">
+                            <i class="fas fa-certificate"></i>
+                            <span>Diploma</span>
+                        </button>
+                        <button type="button" class="visual-option" data-value="Bachelor's Degree">
+                            <i class="fas fa-university"></i>
+                            <span>Graduate</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="education_level" name="education_level" value="12th Pass">
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Your Location" data-hi="आपका स्थान">Your Location</span>
+                    </label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Delhi, Bihar, Mumbai" class="form-input">
+                </div>
+
+                <!-- Preferred Locations -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-map"></i>
+                        <span data-en="Where would you like to work?" data-hi="आप कहाँ काम करना चाहेंगे?">Where would you like to work?</span>
+                    </label>
+                    <input type="text" id="preferred_locations" name="preferred_locations" 
+                           placeholder="e.g., Delhi, Bangalore, Remote" class="form-input">
+                    <small class="help-text">Separate multiple locations with commas</small>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-tools"></i>
+                        <span data-en="Your Skills" data-hi="आपकी कुशलताएं">Your Skills</span>
+                    </label>
+                    <div class="skill-chips">
+                        <span class="skill-chip" data-skill="basic computer">
+                            <i class="fas fa-desktop"></i> Basic Computer
+                        </span>
+                        <span class="skill-chip" data-skill="communication">
+                            <i class="fas fa-comments"></i> Communication
+                        </span>
+                        <span class="skill-chip" data-skill="typing">
+                            <i class="fas fa-keyboard"></i> Typing
+                        </span>
+                        <span class="skill-chip" data-skill="ms office">
+                            <i class="fas fa-file-word"></i> MS Office
+                        </span>
+                        <span class="skill-chip" data-skill="social media">
+                            <i class="fas fa-share-alt"></i> Social Media
+                        </span>
+                        <span class="skill-chip" data-skill="teaching">
+                            <i class="fas fa-chalkboard-teacher"></i> Teaching
+                        </span>
+                        <span class="skill-chip" data-skill="java">
+                            <i class="fas fa-code"></i> Java
+                        </span>
+                        <span class="skill-chip" data-skill="python">
+                            <i class="fab fa-python"></i> Python
+                        </span>
+                    </div>
+                    <input type="hidden" id="skills" name="skills" value="">
+                    <input type="text" id="other_skills" placeholder="Other skills (comma separated)" class="form-input mt-2">
+                </div>
+
+                <!-- Interests/Sectors -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-heart"></i>
+                        <span data-en="Areas of Interest" data-hi="रुचि के क्षेत्र">Areas of Interest</span>
+                    </label>
+                    <div class="sector-grid">
+                        <button type="button" class="sector-btn" data-sector="Software Development">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Software/IT</span>
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Marketing">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Marketing</span>
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Education">
+                            <i class="fas fa-book-reader"></i>
+                            <span>Education</span>
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Social Work">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Social Work</span>
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Healthcare">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Healthcare</span>
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Agriculture">
+                            <i class="fas fa-seedling"></i>
+                            <span>Agriculture</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="preferred_sector" name="preferred_sector" value="">
+                </div>
+
+                <!-- Minimum Stipend -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-rupee-sign"></i>
+                        <span data-en="Minimum Monthly Stipend" data-hi="न्यूनतम मासिक वेतन">Minimum Monthly Stipend</span>
+                    </label>
+                    <div class="stipend-slider">
+                        <input type="range" id="min_stipend" name="min_stipend" min="0" max="20000" step="1000" value="5000">
+                        <div class="stipend-display">₹<span id="stipend_value">5000</span>/month</div>
+                    </div>
+                </div>
+
+                <!-- Language -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-language"></i>
+                        <span data-en="Languages You Know" data-hi="आपकी भाषाएं">Languages You Know</span>
+                    </label>
+                    <input type="text" id="language" name="language" value="Hindi, English" class="form-input">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-search"></i>
+                    <span data-en="Find My Perfect Internships" data-hi="मेरी परफेक्ट इंटर्नशिप खोजें">Find My Perfect Internships</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i>
+                <span data-en="Your Top Matches" data-hi="आपके शीर्ष मैच">Your Top Matches</span>
+            </h2>
+            <div id="recommendationCards" class="recommendation-cards">
+                <!-- Cards will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Finding perfect matches for you...</p>
+        </div>
+<!--
+         Full Registration Section
+        <section class="registration-section">
+            <h2 class="section-title">
+                <i class="fas fa-user-plus"></i>
+                <span data-en="Want More Recommendations?" data-hi="अधिक सिफारिशें चाहिए?">Want More Recommendations?</span>
+            </h2>
+            <button id="registerBtn" class="register-btn">
+                <i class="fas fa-clipboard-list"></i>
+                <span data-en="Complete Registration for 5+ Recommendations" data-hi="5+ सिफारिशों के लिए पंजीकरण पूरा करें">Complete Registration for 5+ Recommendations</span>
+            </button>
+        </section>
+
+         Registration Modal 
+        <div id="registrationModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Complete Your Profile</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="reg_name" name="name" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-birthday-cake"></i> Age</label>
+                        <input type="number" id="reg_age" name="age" min="16" max="35" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-briefcase"></i> Experience (months)</label>
+                        <input type="number" id="reg_experience" name="experience_months" min="0" value="0" class="form-input">
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-check"></i> Complete Registration
+                    </button>
+                </form>
+            </div>
+        </div>
+    -->
+        <!-- Footer -->
+        <footer class="footer">
+            <p>PM Internship Scheme | Empowering India's Youth</p>
+            <p class="small-text">Built with ❤️ for first-generation learners</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-

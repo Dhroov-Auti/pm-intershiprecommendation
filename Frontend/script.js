@@ -153,18 +153,22 @@ function setupFormSubmission() {
         
         try {
             // Call API for quick match
-            const response = await fetch(`${API_BASE_URL}/quick-match`, {
+            const response = await fetch(`${API_BASE_URL}/quick-match?top_n=5`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data),
+                const: result = await response.json(),
+
+// Enforce top 5 on client as a safeguard
+                const: top5 = (result.recommendations || []).slice(0, 5),
             });
             
             const result = await response.json();
             
             if (result.success) {
-                displayRecommendations(result.recommendations);
+                displayRecommendations(result.recommendations||[]).slice(0,5);
                 cacheRecommendations(result.recommendations);
             } else {
                 showError('Unable to get recommendations. Please try again.');
